@@ -1,0 +1,21 @@
+<div class="row mt-3">
+
+
+    <div class="container_2">
+        <button mat-raised-button color="primary" (click)="cambiarPais('Spain')">España</button>
+        <button mat-raised-button color="accent" class="mx-1" (click)="cambiarPais('United Kingdom')">Reino
+            Unido</button>
+        <button mat-raised-button color="warn" class="mx-1" (click)="cambiarPais('Portugal')">Portugal</button>
+        
+        <form class="w-100" #miFormulario="ngForm">
+            <mat-form-field class="example-full-width mx-1 w-100" appearance="fill">
+                <mat-label>Busque la Universidad aquí:</mat-label>
+                <input matInput placeholder="Universidad..." name="name" [(ngModel)]="name" (keyup)="buscar()">
+            </mat-form-field>
+        </form>
+    </div>
+
+    <div class="row mt-5">
+        <app-listado [universidades]="universidades" ></app-listado>
+    </div>
+</div>
