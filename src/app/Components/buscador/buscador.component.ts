@@ -45,4 +45,13 @@ export class BuscadorComponent implements OnInit {
       console.log(this.universidades)}
     )
   }
+
+  buscarAll( pais: string){
+
+    console.log('evento boton')
+
+    this.bs.buscarUniversidades(pais, '').subscribe(
+      resp => this.universidades = [resp]
+    )
+  }
 }

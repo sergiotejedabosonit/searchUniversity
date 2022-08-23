@@ -2,10 +2,10 @@
 
 
     <div class="container_2">
-        <button mat-raised-button color="primary" (click)="cambiarPais('Spain')">España</button>
-        <button mat-raised-button color="accent" class="mx-1" (click)="cambiarPais('United Kingdom')">Reino
+        <button mat-raised-button color="primary" (click)="cambiarPais('Spain')" (click)="buscarAll('Spain')">España</button>
+        <button mat-raised-button color="accent" class="mx-1" (click)="cambiarPais('United Kingdom')" (click)="buscarAll('United Kingdom')">Reino
             Unido</button>
-        <button mat-raised-button color="warn" class="mx-1" (click)="cambiarPais('Portugal')">Portugal</button>
+        <button mat-raised-button color="warn" class="mx-1" (click)="cambiarPais('Portugal')" (click)="buscarAll('Portugal')">Portugal</button>
         
         <form class="w-100" #miFormulario="ngForm">
             <mat-form-field class="example-full-width mx-1 w-100" appearance="fill">
