@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { BuscadorService } from 'src/app/Service/buscador.service';
+import { BuscadorService } from 'src/app/services/buscador.service';
 
 @Component({
   selector: 'app-buscador',
@@ -21,7 +21,7 @@ export class BuscadorComponent implements OnInit {
 
   pais: string = 'Spain'
   name: string = ''
-  universidades: any[] = []
+  universidades: any 
 
   @ViewChild('miFormulario') miFormulario!: NgForm;
 
@@ -41,7 +41,7 @@ export class BuscadorComponent implements OnInit {
     console.log('evento')
     
     this.bs.buscarUniversidades(this.pais, this.name).subscribe(
-      resp => {this.universidades = [resp] ,
+      resp => {this.universidades = resp ,
       console.log(this.universidades)}
     )
   }
@@ -51,7 +51,7 @@ export class BuscadorComponent implements OnInit {
     console.log('evento boton')
 
     this.bs.buscarUniversidades(pais, '').subscribe(
-      resp => this.universidades = [resp]
+      resp => this.universidades = resp
     )
   }
 }
