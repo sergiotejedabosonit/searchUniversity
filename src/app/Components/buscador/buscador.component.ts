@@ -34,22 +34,19 @@ export class BuscadorComponent implements OnInit {
 
   cambiarPais(pais: string){
     this.pais = pais
-    console.log(this.pais)
+    
   }
 
   buscar(){
-    console.log('evento')
     
     this.bs.buscarUniversidades(this.pais, this.name).subscribe(
-      resp => {this.universidades = resp ,
-      console.log(this.universidades)}
+      resp => {this.universidades = resp 
+      }
     )
   }
 
   buscarAll( pais: string){
-
-    console.log('evento boton')
-
+ 
     this.bs.buscarUniversidades(pais, '').subscribe(
       resp => this.universidades = resp
     )
